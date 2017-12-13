@@ -6,10 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page.component.scss']
 })
 export class PageComponent implements OnInit {
-  isDialog: boolean = false
-  changeDialog($event) {
-    this.isDialog = $event
-  }
+
   constructor() { }
 
   ngOnInit() {

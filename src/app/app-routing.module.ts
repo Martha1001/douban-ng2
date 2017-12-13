@@ -15,7 +15,7 @@ const appRoutes: Routes = [
     children: [
       { path: '', component: HomeComponent },
       { path: 'activity', component: ActivityComponent },
-      { path: 'movie', component: HomeComponent }
+      { path: 'movie', component: MovieComponent }
     ]
   },
 

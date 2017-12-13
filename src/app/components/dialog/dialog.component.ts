@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-dialog',
@@ -6,13 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./dialog.component.scss']
 })
 export class DialogComponent implements OnInit {
-  @Input() closeDialog: boolean = false;
-  @Output() change = new EventEmitter();
 
-  closeIt(): any {
-    this.closeDialog = false;
-    this.change.emit(this.closeDialog);
-  }
 
   constructor() { }
 
