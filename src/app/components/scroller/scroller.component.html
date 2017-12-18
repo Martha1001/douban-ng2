@@ -1,3 +1,28 @@
-<p>
-  scroller works!
-</p>
+<div class="scroller">
+  <div class="img-box">
+    <h3 class="f-ct">
+      <span>aa</span>
+      <a routerLink="" class="more">更多</a>
+    </h3>
+    <ul class="img-list">
+      <li *ngFor="let item of movies;let i=index">
+        <a routerLink="">
+          <div class="img-wrap">
+            <img src="{{item.images.medium}}" alt="">
+          </div>
+          <p class="f-tof">{{item.title}}</p>
+          <app-rating></app-rating>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- <div class="find-box">
+    <h3 class="f-ct"></h3>
+    <ul class="find-list f-cl">
+      <li>
+        <a href="" ></a>
+      </li>
+      <li class="line"></li>
+    </ul>
+  </div> -->
+</div>

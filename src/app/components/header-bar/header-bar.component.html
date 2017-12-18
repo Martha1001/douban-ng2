@@ -1,6 +1,8 @@
 <div class="header-bar">
   <div class="flex-box">
-    <a routerLink="/"><h1 class="hd-logo">豆瓣</h1></a>
+    <a routerLink="/">
+      <h1 class="hd-logo">豆瓣</h1>
+    </a>
     <div class="hd-nav">
       <ul class="f-cl">
         <li>
@@ -16,7 +18,7 @@
           <a routerLink="/group" style="color:rgb(42,184,204)">小组</a>
         </li>
       </ul>
-      <span class="button-dialog"></span>
+      <span class="button-dialog" (click)="openIt()"></span>
     </div>
   </div>
 </div>

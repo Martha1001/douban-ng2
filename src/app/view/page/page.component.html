@@ -1,5 +1,5 @@
 <div class="page">
-  <app-header-bar [openDialog]="isDialog" (change)="changeDialog($event)"></app-header-bar>
+  <app-header-bar [openDialog]="isDialog" (change)="dialogStatus($event)"></app-header-bar>
   <router-outlet></router-outlet>
-  <app-dialog *ngIf="isDialog" [closeDialog]="isDialog" (change)="changeDialog($event)"></app-dialog>
+  <app-dialog *ngIf="isDialog" [closeDialog]="isDialog" (change)="dialogStatus($event)"></app-dialog>
 </div>

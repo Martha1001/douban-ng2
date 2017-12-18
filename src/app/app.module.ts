@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http'
 
 
 import { AppComponent } from './app.component';
@@ -18,7 +19,7 @@ import { RatingComponent } from './components/rating/rating.component';
 import { ScrollerComponent } from './components/scroller/scroller.component';
 import { TagsComponent } from './components/tags/tags.component';
 import { TypesComponent } from './components/types/types.component';
-import { ListComponent } from './components/list/list.component';
+import { ListComponent, subStrPipe } from './components/list/list.component';
 import { DownAppComponent } from './components/down-app/down-app.component';
 import { AdBannerComponent } from './components/ad-banner/ad-banner.component';
 import { LoadingComponent } from './components/loading/loading.component';
@@ -43,11 +44,13 @@ import { LoadingComponent } from './components/loading/loading.component';
     ListComponent,
     DownAppComponent,
     AdBannerComponent,
-    LoadingComponent
+    LoadingComponent,
+    subStrPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
