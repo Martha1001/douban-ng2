@@ -14,7 +14,7 @@ export class ListComponent implements OnInit {
   constructor(private httpServer: HttpServerService) { }
 
   ngOnInit() {
-    this.httpServer.getActivity().then(res => {
+    this.httpServer.getActivityList().then(res => {
       this.activity = res.events
     })
   }

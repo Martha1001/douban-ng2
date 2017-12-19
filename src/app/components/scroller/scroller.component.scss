@@ -19,6 +19,9 @@
   white-space: nowrap;
   overflow-x: auto;
 }
+.img-list::-webkit-scrollbar{
+  display: none;
+}
 
 .img-list li{
   display: inline-block;
@@ -66,7 +69,9 @@
   white-space: nowrap;
   overflow-x: auto;
 }
-
+.find-list::-webkit-scrollbar{
+  display: none;
+}
 .find-list li {
   display: inline-block;
 }

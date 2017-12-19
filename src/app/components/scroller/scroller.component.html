@@ -1,28 +1,32 @@
 <div class="scroller">
-  <div class="img-box">
+  <div class="img-box" *ngIf="type=='imgList'">
     <h3 class="f-ct">
-      <span>aa</span>
+      <span>{{title}}</span>
       <a routerLink="" class="more">更多</a>
     </h3>
     <ul class="img-list">
-      <li *ngFor="let item of movies;let i=index">
-        <a routerLink="">
-          <div class="img-wrap">
-            <img src="{{item.images.medium}}" alt="">
-          </div>
-          <p class="f-tof">{{item.title}}</p>
-          <app-rating></app-rating>
-        </a>
-      </li>
+      <ng-container *ngFor="let item of movies;let i=index">
+        <li *ngIf="i<8">
+          <a routerLink="">
+            <div class="img-wrap">
+              <img src="{{item.images.medium}}" alt="">
+            </div>
+            <p class="f-tof">{{item.title}}</p>
+            <app-rating [ratings]="item.rating"></app-rating>
+          </a>
+        </li>
+      </ng-container>
     </ul>
   </div>
-  <!-- <div class="find-box">
-    <h3 class="f-ct"></h3>
+  <div class="find-box" *ngIf="type=='findList'">
+    <h3 class="f-ct">{{title}}</h3>
     <ul class="find-list f-cl">
-      <li>
-        <a href="" ></a>
-      </li>
-      <li class="line"></li>
+      <ng-container *ngFor="let item of findThing">
+        <li *ngIf="!item.line">
+          <a href="{{item.href}}" [style.color]="item.color" [style.borderColor]="item.color">{{item.title}}</a>
+        </li>
+        <li *ngIf="item.line" [class]="line"></li>
+      </ng-container>
     </ul>
-  </div> -->
+  </div>
 </div>

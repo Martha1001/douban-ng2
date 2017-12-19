@@ -1,7 +1,7 @@
 <div class="home-list">
   <ul>
     <li *ngFor="let item of activity">
-      <a routerLink="">
+      <a routerLink="/activity/{{item.id}}">
         <div class="ct f-cl">
           <div class="img-wrap">
             <img src="{{item.image}}" alt="">

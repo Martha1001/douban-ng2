@@ -14,7 +14,7 @@ const appRoutes: Routes = [
     component: PageComponent,
     children: [
       { path: '', component: HomeComponent },
-      { path: 'activity', component: ActivityComponent },
+      { path: 'activity/29498735', component: ActivityComponent },
       { path: 'movie', component: MovieComponent }
     ]
   },
