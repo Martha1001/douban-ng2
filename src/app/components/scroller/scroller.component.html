@@ -7,7 +7,7 @@
     <ul class="img-list">
       <ng-container *ngFor="let item of movies;let i=index">
         <li *ngIf="i<8">
-          <a routerLink="">
+          <a routerLink="subject/{{item.id}}">
             <div class="img-wrap">
               <img src="{{item.images.medium}}" alt="">
             </div>

@@ -1,4 +1,4 @@
-<div class="activity">
+<div class="activity" *ngIf="eventDetail">
   <app-ad-banner title="聊聊你的活动感受"></app-ad-banner>
   <div class="info f-ct">
     <h2 class="title">{{eventDetail.title}}
@@ -32,7 +32,8 @@
     <div class="look-interst">
       <p class="show">
         <span></span>人感兴趣，
-        <span></span>人要参加</p>
+        <span></span>人要参加
+      </p>
       <div class="btn">
         <span>感兴趣</span>
         <span>要参加</span>
@@ -40,14 +41,15 @@
     </div>
     <div class="detail">
       <p class="tit">活动详情</p>
-      <div>{{eventDetail.content}}</div>
-    <div>此活动还没有添加详情哦！</div>
+      <div class="cont" *ngIf="eventDetail.content" [innerHtml]="eventDetail.content"></div>
+      <div *ngIf="eventDetail.content==''">此活动还没有添加详情哦！</div>
+    </div>
+    <app-tags title="查看更多相关分类" *ngIf="eventDetail.tags!=''" [tags]="eventDetail.tags | toArray"></app-tags>
+    <div class="tip">
+      <p class="tit">温馨提示</p>
+      <div>本活动信息由发起人自行发布，仅代表其个人意志，与豆瓣网无关，且活动的后续事项由发起人独立安排及负责。豆瓣网仅提供信息展示空间。不能保证活动的真实性、有效性、安全性，请在参加活动前与发起人具体确认核实相关情况，注意人身安全与财产安全。</div>
+    </div>
   </div>
-  <app-tags></app-tags>
-  <div class="tip">
-    <p class="tit">温馨提示</p>
-    <div>本活动信息由发起人自行发布，仅代表其个人意志，与豆瓣网无关，且活动的后续事项由发起人独立安排及负责。豆瓣网仅提供信息展示空间。不能保证活动的真实性、有效性、安全性，请在参加活动前与发起人具体确认核实相关情况，注意人身安全与财产安全。</div>
-  </div>
-  <app-loading></app-loading>
+  <!-- <app-loading></app-loading> -->
   <app-down-app></app-down-app>
 </div>

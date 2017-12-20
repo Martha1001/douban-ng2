@@ -62,7 +62,7 @@ export class ScrollerComponent implements OnInit {
   constructor(private httpServer: HttpServerService) { }
 
   ngOnInit() {
-    this.httpServer.getMovie(this.tag).then(res => {
+    this.httpServer.getMovieList(this.tag).then(res => {
       this.movies = res.subjects
     })
   }

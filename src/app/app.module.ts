@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { PageComponent } from './view/page/page.component';
 import { HomeComponent } from './view/home/home.component';
-import { ActivityComponent } from './view/activity/activity.component';
+import { ActivityComponent, toArrayPipe } from './view/activity/activity.component';
 import { MovieComponent } from './view/movie/movie.component';
 import { BookComponent } from './view/book/book.component';
 import { SubjectComponent } from './view/subject/subject.component';
@@ -45,7 +45,8 @@ import { LoadingComponent } from './components/loading/loading.component';
     DownAppComponent,
     AdBannerComponent,
     LoadingComponent,
-    subStrPipe
+    subStrPipe,
+    toArrayPipe
   ],
   imports: [
     BrowserModule,

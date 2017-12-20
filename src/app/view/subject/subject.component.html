@@ -1,3 +1,57 @@
-<p>
-  subject works!
-</p>
+<div class="subject-box" *ngIf="subject">
+  <div>
+    <app-ad-banner title="聊聊你的观影感受"></app-ad-banner>
+    <app-ad-banner title="聊聊你的阅读感受"></app-ad-banner>
+  </div>
+  <div class="subject f-ct">
+    <h3 class="title f-tof">{{subject.title}}</h3>
+    <div class="meta-box f-cl">
+      <div class="l">
+        <!-- <div class="rating-box">
+          <app-rating></app-rating>
+          <span>{{subject.ratings_count}}人评论</span>
+        </div> -->
+        <div class="meta"></div>
+      </div>
+      <div class="r">
+        <img src="{{subject.images.medium}}" alt="">
+      </div>
+    </div>
+    <a class="btn-app" href="#">用APP查看影人资料</a>
+    <div>
+      <div class="wish-box">
+        <a href="#">想看</a>
+        <a href="#">看过</a>
+      </div>
+      <div class="wish-box wish-box-book">
+        <a href="#">想读</a>
+        <a href="#">在读</a>
+        <a href="#">读过</a>
+      </div>
+    </div>
+    <div class="summary">
+      <p class="tit">{{subject.title}}的剧情简介</p>
+      <p class="tit">{{subject.title}}的内容简介</p>
+      <div>{{subject.summary}}</div>
+    </div>
+    <div v-if="!subject.author" class="casts">
+      <p class="tit">影人</p>
+      <ul class="casts-list">
+        <li>
+          <img src="" alt="">
+          <p></p>
+          <span>导演</span>
+        </li>
+        <li>
+          <img src="" alt="">
+          <p></p>
+          <span>演员</span>
+        </li>
+      </ul>
+    </div>
+    <app-tags title="查看更多豆瓣高分电影" :items="getTag"></app-tags>
+  </div>
+  <app-scroller title="推荐的豆列" type="findList" :items="findThing"></app-scroller>
+  <app-types title="了解更多电影信息" :items="movieType"></app-types>
+  <app-down-app></app-down-app>
+</div>

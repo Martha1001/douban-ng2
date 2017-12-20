@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { HttpServerService } from '../../http-server.service'
+import { ActivatedRoute, Params } from '@angular/router'
 
 @Component({
   selector: 'app-activity',
@@ -7,15 +8,29 @@ import { HttpServerService } from '../../http-server.service'
   styleUrls: ['./activity.component.scss'],
   providers: [HttpServerService]
 })
-export class ActivityComponent implements OnInit {
-  eventDetail: any
 
-  constructor(private httpServer: HttpServerService) { }
+export class ActivityComponent implements OnInit {
+  eventDetail: object
+
+  constructor(
+    private httpServer: HttpServerService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
-    this.httpServer.getActivity().then(res => {
-      this.eventDetail = res
+    this.route.params.subscribe((params: Params) => {
+      this.httpServer.getActivity(params.id).then(res => {
+        this.eventDetail = res
+      })
     })
   }
+}
 
+@Pipe({
+  name: 'toArray'
+})
+export class toArrayPipe implements PipeTransform {
+  transform(value: string): Array<string> {
+    return value.split(',')
+  }
 }

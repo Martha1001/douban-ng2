@@ -1,0 +1,118 @@
+.subject-box .title {
+  margin: 20px 0 10px;
+  font-size: 24px;
+}
+
+.subject-box .tit {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #999;
+}
+
+.meta-box {
+  margin-bottom: 10px;
+}
+
+.meta-box .l {
+  float: left;
+  width: 64%;
+  font-size: 14px;
+}
+
+.meta-box .r {
+  position: relative;
+  float: right;
+  width: 32%;
+  padding-top: 47.36%;
+}
+
+.meta-box .r img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.rating-box .rating {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.rating-box .rating .start {
+  width: 15px;
+  height: 15px;
+}
+
+.rating-box span {
+  color: #999;
+}
+
+.meta {
+  margin: 10px 0;
+}
+
+.btn-app {
+  color: #42bd56;
+  font-size: 14px;
+}
+
+.wish-box {
+  display: flex;
+  margin: 20px 0 25px;
+  justify-content: space-between;
+}
+
+.wish-box a {
+  display: inline-block;
+  width: 48%;
+  padding: 5px 0;
+  color: #ffb712;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #ffb712;
+  border-radius: 4px;
+}
+
+.wish-box-book a {
+  width: 31%;
+}
+
+.summary {
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.casts {
+  margin-bottom: 20px;
+}
+
+.casts-list {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.casts-list li {
+  display: inline-block;
+  width: 100px;
+  margin-left: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.casts-list li:first-child {
+  margin-left: 0;
+}
+
+.casts-list li img {
+  width: 100%;
+  height: 143px;
+}
+
+.casts-list li p {
+  color: #333;
+}
+
+.casts-list li span {
+  color: #999;
+}

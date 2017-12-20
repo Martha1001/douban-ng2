@@ -1,0 +1,99 @@
+{
+  "rating": {
+    "max": 10,
+    "average": "7.9",
+    "numRaters": 124307,
+    "min": 0
+  },
+  "author": [
+    {
+      "name": "冯小刚 Xiaogang Feng"
+    }
+  ],
+  "alt_title": "Youth",
+  "image": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2507361925.webp",
+  "title": "芳华",
+  "summary": "根据严歌苓同名小说改编，讲述了上世纪七十到八十年代充满理想和激情的军队文工团，一群正值芳华的青春少年，经历着成长中的爱情萌发与充斥变数的人生命运。乐于助人、质朴善良的刘峰（黄轩 饰），和从农村来，屡遭文工团女兵歧视与排斥的何小萍（苗苗 饰），“意外”离开了浪漫安逸的文工团，卷入了残酷的战争，在战场上继续绽放着血染的芳华。他们感受着集体生活的痛与暖、故人的分别与重逢，还有时代变革之下，每个人的渺小脆弱和无力招架。而昔日的文工团战友萧穗子（钟楚曦 饰）、林丁丁（杨采钰 饰）、郝淑雯（李晓峰 饰）、陈灿（王天辰 饰）等人，在大时代的背景之下，每个人的命运大相径庭，拥有着出人意料的人生归宿……从来不需要想起，永远也不会忘记。",
+  "attrs": {
+    "language": [
+      "汉语普通话"
+    ],
+    "pubdate": [
+      "2017-09-07(多伦多电影节)",
+      "2017-12-15(中国大陆)"
+    ],
+    "title": [
+      "芳华"
+    ],
+    "country": [
+      "中国大陆"
+    ],
+    "writer": [
+      "严歌苓 Geling Yan"
+    ],
+    "director": [
+      "冯小刚 Xiaogang Feng"
+    ],
+    "cast": [
+      "黄轩 Xuan Huang",
+      "苗苗 Miao Miao",
+      "钟楚曦 Elane Zhong",
+      "杨采钰 Caiyu Yang",
+      "李晓峰 Xiaofeng Li",
+      "王天辰 Tianchen Wang",
+      "王可如 Keru Wang",
+      "隋君卓玛 Drolma Suijun",
+      "张仁博 Renbo Zhang",
+      "苏岩 Yan Su"
+    ],
+    "movie_duration": [
+      "136分钟",
+      "146分钟(多伦多电影节)"
+    ],
+    "year": [
+      "2017"
+    ],
+    "movie_type": [
+      "剧情",
+      "历史",
+      "战争"
+    ]
+  },
+  "id": "https://api.douban.com/movie/26862829",
+  "mobile_link": "https://m.douban.com/movie/subject/26862829/",
+  "alt": "https://movie.douban.com/movie/26862829",
+  "tags": [
+    {
+      "count": 15456,
+      "name": "青春"
+    },
+    {
+      "count": 14150,
+      "name": "文艺"
+    },
+    {
+      "count": 9382,
+      "name": "历史"
+    },
+    {
+      "count": 9162,
+      "name": "战争"
+    },
+    {
+      "count": 8924,
+      "name": "剧情"
+    },
+    {
+      "count": 8557,
+      "name": "中国大陆"
+    },
+    {
+      "count": 8429,
+      "name": "人性"
+    },
+    {
+      "count": 8019,
+      "name": "小说改编"
+    }
+  ]
+}

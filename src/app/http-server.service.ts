@@ -8,6 +8,11 @@ export class HttpServerService {
 
   constructor(private http: Http) { }
 
+  private handleError(error: any): Promise<any> {
+    console.log('An error occurred', error);
+    return Promise.reject(error.message || error);
+  }
+
   getActivityList(): Promise<any> {
     return new Promise((resolve, reject) => {
       this.http.get('../assets/activity.json')
@@ -18,10 +23,9 @@ export class HttpServerService {
         .catch(this.handleError)
     })
   }
-
-  getActivity(): Promise<any> {
+  getActivity(id): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.http.get('../assets/29498735.json')
+      this.http.get('../assets/' + id + '.json')
         .toPromise()
         .then(res => {
           resolve(res.json())
@@ -31,7 +35,7 @@ export class HttpServerService {
   }
 
   private movieUrl: string
-  getMovie(tag): Promise<any> {
+  getMovieList(tag): Promise<any> {
     switch (tag) {
       case 'hotMovie':
         this.movieUrl = '../assets/hotMovie.json'
@@ -54,11 +58,18 @@ export class HttpServerService {
         .catch(this.handleError)
     })
   }
-
-
-  private handleError(error: any): Promise<any> {
-    console.log('An error occurred', error);
-    return Promise.reject(error.message || error);
+  getMovie(id):Promise<any>{
+    return new Promise((resolve,reject)=>{
+      this.http.get('../assets/' + id + '.json')
+      .toPromise()
+      .then(res=>{
+        console.log(id)
+        resolve(res.json())
+      })
+      .catch(this.handleError)
+    })
   }
+
+
 
 }
