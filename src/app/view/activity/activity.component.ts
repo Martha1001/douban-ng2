@@ -1,4 +1,4 @@
-import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpServerService } from '../../http-server.service'
 import { ActivatedRoute, Params } from '@angular/router'
 
@@ -20,17 +20,9 @@ export class ActivityComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.httpServer.getActivity(params.id).then(res => {
+        console.log(params)
         this.eventDetail = res
       })
     })
-  }
-}
-
-@Pipe({
-  name: 'toArray'
-})
-export class toArrayPipe implements PipeTransform {
-  transform(value: string): Array<string> {
-    return value.split(',')
   }
 }

@@ -1,20 +1,21 @@
 <div class="subject-box" *ngIf="subject">
   <div>
-    <app-ad-banner title="聊聊你的观影感受"></app-ad-banner>
-    <app-ad-banner title="聊聊你的阅读感受"></app-ad-banner>
+    <app-ad-banner *ngIf="subject.attrs" title="聊聊你的观影感受"></app-ad-banner>
+    <app-ad-banner *ngIf="subject.publisher" title="聊聊你的阅读感受"></app-ad-banner>
   </div>
   <div class="subject f-ct">
     <h3 class="title f-tof">{{subject.title}}</h3>
     <div class="meta-box f-cl">
       <div class="l">
-        <!-- <div class="rating-box">
-          <app-rating></app-rating>
-          <span>{{subject.ratings_count}}人评论</span>
-        </div> -->
-        <div class="meta"></div>
+        <div class="rating-box">
+          <app-rating [ratings]="subject.rating"></app-rating>
+          <span>{{subject.rating.numRaters}}人评论</span>
+        </div>
+        <div class="meta" *ngIf="subject.attrs">{{meta}}</div>
+        <div class="meta" *ngIf="subject.publisher">{{meta}}</div>
       </div>
       <div class="r">
-        <img src="{{subject.images.medium}}" alt="">
+        <img src="{{subject.image}}" alt="">
       </div>
     </div>
     <a class="btn-app" href="#">用APP查看影人资料</a>
@@ -30,8 +31,8 @@
       </div>
     </div>
     <div class="summary">
-      <p class="tit">{{subject.title}}的剧情简介</p>
-      <p class="tit">{{subject.title}}的内容简介</p>
+      <p class="tit" *ngIf="!subject.author">{{subject.title}}的剧情简介</p>
+      <p class="tit" *ngIf="subject.author">{{subject.title}}的内容简介</p>
       <div>{{subject.summary}}</div>
     </div>
     <div v-if="!subject.author" class="casts">
@@ -49,9 +50,9 @@
         </li>
       </ul>
     </div>
-    <app-tags title="查看更多豆瓣高分电影" :items="getTag"></app-tags>
+    <app-tags title="查看更多豆瓣高分电影" [tags]="subject.tags | arrToArray"></app-tags>
   </div>
-  <app-scroller title="推荐的豆列" type="findList" :items="findThing"></app-scroller>
-  <app-types title="了解更多电影信息" :items="movieType"></app-types>
+  <app-scroller title="推荐的豆列" type="findList"></app-scroller>
+  <app-types title="了解更多电影信息"></app-types>
   <app-down-app></app-down-app>
 </div>

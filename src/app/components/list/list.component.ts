@@ -1,4 +1,4 @@
-import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpServerService } from '../../http-server.service'
 
 @Component({
@@ -21,12 +21,4 @@ export class ListComponent implements OnInit {
 
 }
 
-@Pipe({
-  name: 'subStr'
-})
-export class subStrPipe implements PipeTransform {
-  transform(value: string): string {
-    let newVal = value.replace(/<.*?>/g,'')
-    return newVal.slice(0,35).concat('...')
-  }
-}
+

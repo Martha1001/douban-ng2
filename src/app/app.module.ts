@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { PageComponent } from './view/page/page.component';
 import { HomeComponent } from './view/home/home.component';
-import { ActivityComponent, toArrayPipe } from './view/activity/activity.component';
+import { ActivityComponent } from './view/activity/activity.component';
 import { MovieComponent } from './view/movie/movie.component';
 import { BookComponent } from './view/book/book.component';
 import { SubjectComponent } from './view/subject/subject.component';
@@ -19,10 +19,11 @@ import { RatingComponent } from './components/rating/rating.component';
 import { ScrollerComponent } from './components/scroller/scroller.component';
 import { TagsComponent } from './components/tags/tags.component';
 import { TypesComponent } from './components/types/types.component';
-import { ListComponent, subStrPipe } from './components/list/list.component';
+import { ListComponent } from './components/list/list.component';
 import { DownAppComponent } from './components/down-app/down-app.component';
 import { AdBannerComponent } from './components/ad-banner/ad-banner.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { subStrPipe, toArrayPipe,arrToArrayPipe } from './pipes.pipe';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { LoadingComponent } from './components/loading/loading.component';
     AdBannerComponent,
     LoadingComponent,
     subStrPipe,
-    toArrayPipe
+    toArrayPipe,
+    arrToArrayPipe
   ],
   imports: [
     BrowserModule,

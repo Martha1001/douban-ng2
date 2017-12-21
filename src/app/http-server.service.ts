@@ -5,13 +5,13 @@ import 'rxjs/add/operator/toPromise'
 
 @Injectable()
 export class HttpServerService {
-
-  constructor(private http: Http) { }
-
+  private movieUrl: string
   private handleError(error: any): Promise<any> {
     console.log('An error occurred', error);
     return Promise.reject(error.message || error);
   }
+
+  constructor(private http: Http) { }
 
   getActivityList(): Promise<any> {
     return new Promise((resolve, reject) => {
@@ -34,7 +34,6 @@ export class HttpServerService {
     })
   }
 
-  private movieUrl: string
   getMovieList(tag): Promise<any> {
     switch (tag) {
       case 'hotMovie':
@@ -58,15 +57,14 @@ export class HttpServerService {
         .catch(this.handleError)
     })
   }
-  getMovie(id):Promise<any>{
-    return new Promise((resolve,reject)=>{
+  getMovie(id): Promise<any> {
+    return new Promise((resolve, reject) => {
       this.http.get('../assets/' + id + '.json')
-      .toPromise()
-      .then(res=>{
-        console.log(id)
-        resolve(res.json())
-      })
-      .catch(this.handleError)
+        .toPromise()
+        .then(res => {
+          resolve(res.json())
+        })
+        .catch(this.handleError)
     })
   }
 
