@@ -12,32 +12,43 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class SubjectComponent implements OnInit {
   subject: object;
   type: string;
-  meta: string
+  meta: string;
 
   constructor(
     private httpServer: HttpServerService,
-    private route: ActivatedRoute,
-  ) { };
+    private route: ActivatedRoute
+  ) { }
 
   getMeta(type) {
     switch (type) {
       case 'movie':
-        this.meta = this.subject['attrs'].year + ' / ' +
-          this.subject['attrs'].movie_type.join(' / ') + ' / ' +
-          this.subject['attrs'].director.map(idx => idx.name).join('(导演) / ') + ' (导演) / ' +
-          this.subject['attrs'].cast.map(idx => idx.name).join('(主演) / ') + ' (主演) / ' +
-          this.subject['attrs'].country.join(' / ')
+        if (this.subject['attrs']) {
+          this.meta = this.subject['attrs'].movie_duration[0] + ' / ' || ''
+          // this.subject['attrs'].movie_type.join(' / ') + ' / ' +
+          // this.subject['attrs'].director[0].match(/[^a-zA-Z 0-9]/g).join('') + '(导演) / ' +
+          // this.subject['attrs'].cast.slice(0, 3).map(x => {
+          //   return x.match(/[^a-zA-Z 0-9]/g).join('')
+          // }).join(' / ') + ' / ' +
+          // this.subject['attrs'].pubdate.join(' / ')
+        } else {
+
+        }
+
 
     }
-  };
+
+
+
+  }
+
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.httpServer.getMovie(params.id).then(res => {
-        console.log(params)
         this.subject = res;
-      });
-      this.getMeta(params.classify)
+        this.getMeta(params.classify)
+      })
     });
   };
-}
+
+};
