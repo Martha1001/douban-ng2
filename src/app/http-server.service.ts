@@ -6,19 +6,23 @@ import 'rxjs/add/operator/toPromise'
 @Injectable()
 export class HttpServerService {
   private movieUrl: string
+
+  constructor(private http: Http) { }
+
   private handleError(error: any): Promise<any> {
     console.log('An error occurred', error);
     return Promise.reject(error.message || error);
   }
 
-  constructor(private http: Http) { }
-
   getActivityList(): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.http.get('../assets/activity.json')
+      this.http.get('http://localhost:4200/v2/event/list?loc=108296')
         .toPromise()
         .then(res => {
-          resolve(res.json())
+          console.log(res.status)
+          if (res.status === 200) {
+            resolve(res.json())
+          }
         })
         .catch(this.handleError)
     })
@@ -28,7 +32,9 @@ export class HttpServerService {
       this.http.get('../assets/' + id + '.json')
         .toPromise()
         .then(res => {
-          resolve(res.json())
+          if (res.status === 200) {
+            resolve(res.json())
+          }
         })
         .catch(this.handleError)
     })
@@ -52,7 +58,9 @@ export class HttpServerService {
       this.http.get(this.movieUrl)
         .toPromise()
         .then(res => {
-          resolve(res.json())
+          if (res.status === 200) {
+            resolve(res.json())
+          }
         })
         .catch(this.handleError)
     })
@@ -62,7 +70,9 @@ export class HttpServerService {
       this.http.get('../assets/' + id + '.json')
         .toPromise()
         .then(res => {
-          resolve(res.json())
+          if (res.status === 200) {
+            resolve(res.json())
+          }
         })
         .catch(this.handleError)
     })

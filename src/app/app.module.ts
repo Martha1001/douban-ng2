@@ -23,7 +23,7 @@ import { ListComponent } from './components/list/list.component';
 import { DownAppComponent } from './components/down-app/down-app.component';
 import { AdBannerComponent } from './components/ad-banner/ad-banner.component';
 import { LoadingComponent } from './components/loading/loading.component';
-import { subStrPipe, toArrayPipe,arrToArrayPipe } from './pipes.pipe';
+import { subStrPipe, toArrayPipe, arrToArrayPipe } from './pipes.pipe';
 
 
 @NgModule({

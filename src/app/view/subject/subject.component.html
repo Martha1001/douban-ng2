@@ -11,8 +11,7 @@
           <app-rating [ratings]="subject.rating"></app-rating>
           <span>{{subject.rating.numRaters?subject.rating.numRaters:subject.ratings_count}}人评论</span>
         </div>
-        <div class="meta" *ngIf="subject.attrs">{{meta}}</div>
-        <div class="meta" *ngIf="subject.publisher">{{meta}}</div>
+        <div class="meta">{{meta}}</div>
       </div>
       <div class="r">
         <img src="{{subject.image?subject.image:subject.images.medium}}" alt="">
