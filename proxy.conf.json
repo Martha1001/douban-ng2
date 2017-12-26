@@ -1,6 +1,8 @@
 {
   "/v2/*": {
     "target": "https://api.douban.com",
-    "secure": false
+    "secure": false,
+    "changeOrigin": "true",
+    "logLevel": "debug"
   }
 }

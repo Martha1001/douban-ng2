@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpServerService } from '../../http-server.service'
+import { ActivatedRoute, Params } from '@angular/router'
 
 @Component({
   selector: 'app-scroller',
@@ -11,7 +12,7 @@ export class ScrollerComponent implements OnInit {
   @Input() title
   @Input() type
   @Input() tag
-  movies: string
+  subjects: string
   line: string = 'line'
   findThing: Array<object> = [
     {
@@ -59,11 +60,15 @@ export class ScrollerComponent implements OnInit {
     }
   ]
 
-  constructor(private httpServer: HttpServerService) { }
+  constructor(
+    private httpServer: HttpServerService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
-    this.httpServer.getMovieList(this.tag).then(res => {
-      this.movies = res.subjects
+    console.log(this.tag)
+    this.httpServer.getSubjectList(this.tag).then(res => {
+      this.subjects = res.subjects ? res.subjects : res.books
     })
   }
 

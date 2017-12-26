@@ -41,7 +41,7 @@
     </div>
     <div class="detail">
       <p class="tit">活动详情</p>
-      <div class="cont" *ngIf="eventDetail.content" [innerHtml]="eventDetail.content"></div>
+      <div class="cont" *ngIf="eventDetail.content" [innerHtml]="eventDetail.content "></div>
       <div *ngIf="eventDetail.content==''">此活动还没有添加详情哦！</div>
     </div>
     <app-tags title="查看更多相关分类" *ngIf="eventDetail.tags!=''" [tags]="eventDetail.tags | toArray:','"></app-tags>

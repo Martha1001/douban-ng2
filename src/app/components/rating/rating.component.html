@@ -1,7 +1,6 @@
 <div class="rating">
     <div class="start" *ngIf="ratings.average != 0">
-      <span class="start-full" *ngFor="let n of full"></span>
-      <span class="start-gray" *ngFor="let n of gray"></span>
+      <span class="start-full" *ngFor="let n of full"></span><span class="start-gray" *ngFor="let n of gray"></span>
       <span>{{ratings.average}}</span>
     </div>
     <div class="txt" *ngIf="ratings.average == 0">

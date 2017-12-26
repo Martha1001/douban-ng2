@@ -30,27 +30,24 @@ export class SubjectComponent implements OnInit {
               return x.match(/[^a-zA-Z 0-9]/g).join('')
             }).join(' / ') + ' / ' +
             this.subject['attrs'].pubdate.map(x => {
-              if(x.match('大陆')){
+              if (x.match('大陆')) {
                 return x
               }
             }).join('')
         } else {
-          console.log(this.subject['genres'])
-          this.meta = this.subject['genres'].join(' / ')
-
+          this.meta = '您点击的是旧版API.'
         }
-
-
+        break
+      case 'book':
+        this.meta = 'bookMeta'
+        break
     }
-
-
-
   }
 
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
-      this.httpServer.getMovie(params.id).then(res => {
+      this.httpServer.getSubject(params.classify, params.id).then(res => {
         this.subject = res;
         this.getMeta(params.classify)
       })

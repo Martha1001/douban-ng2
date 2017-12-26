@@ -18,7 +18,7 @@ export class ListComponent implements OnInit {
       this.activity = res.events
     })
   }
-
+  
 }
 
 

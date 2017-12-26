@@ -16,6 +16,7 @@ const appRoutes: Routes = [
       { path: '', component: HomeComponent },
       { path: ':classify/:id', component: ActivityComponent },
       { path: 'movie', component: MovieComponent },
+      { path: 'book', component: BookComponent },
       { path: ':classify/subject/:id', component: SubjectComponent }
     ]
   },

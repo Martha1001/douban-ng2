@@ -5,7 +5,7 @@
       <a routerLink="" class="more">更多</a>
     </h3>
     <ul class="img-list">
-      <ng-container *ngFor="let item of movies;let i=index">
+      <ng-container *ngFor="let item of subjects;let i=index">
         <li *ngIf="i<8">
           <a routerLink="subject/{{item.id}}">
             <div class="img-wrap">

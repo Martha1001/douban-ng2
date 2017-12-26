@@ -19,8 +19,7 @@ export class ActivityComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
-      this.httpServer.getActivity(params.id).then(res => {
-        console.log(params)
+      this.httpServer.getSubject(params.classify, params.id).then(res => {
         this.eventDetail = res
       })
     })
