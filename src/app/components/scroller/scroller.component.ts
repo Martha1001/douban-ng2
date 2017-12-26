@@ -66,10 +66,11 @@ export class ScrollerComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.tag)
-    this.httpServer.getSubjectList(this.tag).then(res => {
-      this.subjects = res.subjects ? res.subjects : res.books
-    })
+    if(this.tag != null){
+      this.httpServer.getSubjectList(this.tag).then(res => {
+        this.subjects = res.subjects ? res.subjects : res.books
+      })
+    }
   }
 
 }

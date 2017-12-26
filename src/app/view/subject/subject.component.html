@@ -9,49 +9,37 @@
       <div class="l">
         <div class="rating-box">
           <app-rating [ratings]="subject.rating"></app-rating>
-          <span>{{subject.rating.numRaters?subject.rating.numRaters:subject.ratings_count}}人评论</span>
+          <span>{{subject.rating.numRaters}}人评论</span>
         </div>
         <div class="meta">{{meta}}</div>
       </div>
       <div class="r">
-        <img src="{{subject.image?subject.image:subject.images.medium}}" alt="">
+        <img src="{{subject.image}}" alt="{{subject.title}}">
       </div>
     </div>
-    <a class="btn-app" href="#">用APP查看影人资料</a>
+    <a class="btn-app" href="#" *ngIf="subject.attrs">用APP查看影人资料</a>
+    <a class="btn-app" href="#" *ngIf="subject.publisher">用APP查看图书资料</a>
     <div>
-      <div class="wish-box">
+      <div class="wish-box" *ngIf="subject.attrs">
         <a href="#">想看</a>
         <a href="#">看过</a>
       </div>
-      <div class="wish-box wish-box-book">
+      <div class="wish-box wish-box-book" *ngIf="subject.publisher">
         <a href="#">想读</a>
         <a href="#">在读</a>
         <a href="#">读过</a>
       </div>
     </div>
     <div class="summary">
-      <p class="tit" *ngIf="!subject.author">{{subject.title}}的剧情简介</p>
-      <p class="tit" *ngIf="subject.author">{{subject.title}}的内容简介</p>
+      <p class="tit" *ngIf="subject.attrs">{{subject.title}}的剧情简介</p>
+      <p class="tit" *ngIf="subject.publisher">{{subject.title}}的内容简介</p>
       <div>{{subject.summary}}</div>
     </div>
-    <div v-if="!subject.author" class="casts">
-      <p class="tit">影人</p>
-      <ul class="casts-list">
-        <li>
-          <img src="" alt="">
-          <p></p>
-          <span>导演</span>
-        </li>
-        <li>
-          <img src="" alt="">
-          <p></p>
-          <span>演员</span>
-        </li>
-      </ul>
-    </div>
-    <app-tags title="查看更多豆瓣高分电影" *ngIf="subject.tags" [tags]="subject.tags | arrToArray"></app-tags>
+    <app-tags title="查看更多豆瓣高分电影" *ngIf="subject.attrs" [tags]="subject.tags | arrToArray"></app-tags>
+    <app-tags title="查看更多豆瓣高分好书" *ngIf="subject.publisher" [tags]="subject.tags | arrToArray"></app-tags>
   </div>
   <app-scroller title="推荐的豆列" type="findList"></app-scroller>
-  <app-types title="了解更多电影信息"></app-types>
+  <app-types *ngIf="subject.attrs" title="了解更多电影信息"></app-types>
+  <app-types *ngIf="subject.publisher" title="了解更多图书信息"></app-types>
   <app-down-app></app-down-app>
 </div>

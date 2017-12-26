@@ -1,0 +1,103 @@
+{
+  "count": 2,
+  "start": 0,
+  "total": 2,
+  "musics": [
+    {
+      "rating": {
+        "max": 10,
+        "average": 0,
+        "numRaters": 0,
+        "min": 0
+      },
+      "author": [
+        {
+          "name": "吴泓君 小萍萍"
+        }
+      ],
+      "alt_title": "全新华语新年专辑",
+      "image": "https://img3.doubanio.com/spic/s28974355.jpg",
+      "tags": [],
+      "mobile_link": "https://m.douban.com/music/subject/26855157/",
+      "attrs": {
+        "publisher": [
+          "瑞华唱片"
+        ],
+        "singer": [
+          "吴泓君 小萍萍"
+        ],
+        "version": [
+          "专辑"
+        ],
+        "pubdate": [
+          "1994-01-01"
+        ],
+        "title": [
+          "小萍萍天开财路贺丰年"
+        ],
+        "media": [
+          "CD"
+        ],
+        "tracks": [
+          "01.拜年\n02.天开财路贺丰年\n03.恭喜行行都赚钱\n04.鞭炮锣鼓响连天\n05.财神到我家\n06.人财两旺富贵全\n07.快乐年庆团圆\n08.新年恭喜发财\n09.福星高照\n10.开心又一年\n11.平平安安过新年\n12.狮鼓贺年\n13.恭喜恭喜\n14.向歌友拜年"
+        ],
+        "discs": [
+          "1"
+        ]
+      },
+      "title": "小萍萍天开财路贺丰年",
+      "alt": "https://music.douban.com/subject/26855157/",
+      "id": "26855157"
+    },
+    {
+      "rating": {
+        "max": 10,
+        "average": 0,
+        "numRaters": 0,
+        "min": 0
+      },
+      "author": [
+        {
+          "name": "吴泓君"
+        },
+        {
+          "name": "小萍萍"
+        }
+      ],
+      "alt_title": "",
+      "image": "https://img3.doubanio.com/spic/s28986442.jpg",
+      "tags": [],
+      "mobile_link": "https://m.douban.com/music/subject/26858303/",
+      "attrs": {
+        "publisher": [
+          "银城唱片"
+        ],
+        "singer": [
+          "吴泓君",
+          "小萍萍"
+        ],
+        "version": [
+          "专辑"
+        ],
+        "pubdate": [
+          "1993-01-03"
+        ],
+        "title": [
+          "小萍萍20首华语新年专辑祝你新年快乐"
+        ],
+        "media": [
+          "磁带"
+        ],
+        "tracks": [
+          "A面：\n01.祝你新年快乐\n02.恭喜大家新年好\n03.新年团聚\n04.金狮拜年\n05.向歌友拜年\n06.幸福年\n07.新年好\n08.万年红\n09.贺新年\n10.爆竹一声大地春\nB面：\n01.百万富翁你来当\n02.恭喜恭喜\n03.过个快乐年\n04.喜气羊羊\n05.春天来了\n06.五福临门喜迎春\n07.小妹来拜年\n08.大家恭喜\n09.鞠躬行李拜新年\n10.前面打着鼓"
+        ],
+        "discs": [
+          "1"
+        ]
+      },
+      "title": "小萍萍20首华语新年专辑祝你新年快乐",
+      "alt": "https://music.douban.com/subject/26858303/",
+      "id": "26858303"
+    }
+  ]
+}

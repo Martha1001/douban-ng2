@@ -31,7 +31,7 @@ export class SubjectComponent implements OnInit {
             }).join(' / ') + ' / ' +
             this.subject['attrs'].pubdate.map(x => {
               if (x.match('大陆')) {
-                return x
+                return x + '上映'
               }
             }).join('')
         } else {
@@ -39,11 +39,15 @@ export class SubjectComponent implements OnInit {
         }
         break
       case 'book':
-        this.meta = 'bookMeta'
+        this.meta = this.subject['author'][0] + ' / ' +
+          this.subject['publisher'] + ' / ' +
+          this.subject['pages'] + '页 / ' +
+          this.subject['binding'] + ' / ' +
+          this.subject['price'] + ' / ' +
+          this.subject['pubdate']
         break
     }
   }
-
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {

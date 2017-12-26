@@ -1,0 +1,80 @@
+{
+  "rating": {
+    "max": 10,
+    "average": "7.1",
+    "numRaters": 2161,
+    "min": 0
+  },
+  "author": [
+    {
+      "name": "张惠妹"
+    }
+  ],
+  "alt_title": "",
+  "image": "https://img3.doubanio.com/spic/s29636535.jpg",
+  "title": "偷故事的人",
+  "mobile_link": "https://m.douban.com/music/subject/27200370/",
+  "summary": "张惠妹 / 专辑 / 2017-12-12 / 环球音乐 / CD",
+  "attrs": {
+    "publisher": [
+      "环球音乐"
+    ],
+    "singer": [
+      "张惠妹"
+    ],
+    "version": [
+      "专辑"
+    ],
+    "pubdate": [
+      "2017-12-12"
+    ],
+    "title": [
+      "偷故事的人"
+    ],
+    "media": [
+      "CD"
+    ],
+    "tracks": [
+      "01. 序.偷故事的人\n02. 壞的好人\n03. 裝醉\n04. 你說了算\n05. 戒斷\n06. 連名帶姓\n07. 身後\n08. 光\n09. 到底\n10. 傲嬌"
+    ],
+    "discs": [
+      "1"
+    ]
+  },
+  "alt": "https://music.douban.com/subject/27200370/",
+  "id": "27200370",
+  "tags": [
+    {
+      "count": 426,
+      "name": "张惠妹"
+    },
+    {
+      "count": 229,
+      "name": "华语"
+    },
+    {
+      "count": 190,
+      "name": "2017"
+    },
+    {
+      "count": 175,
+      "name": "台湾"
+    },
+    {
+      "count": 150,
+      "name": "偷故事的人"
+    },
+    {
+      "count": 139,
+      "name": "女声"
+    },
+    {
+      "count": 100,
+      "name": "Pop"
+    },
+    {
+      "count": 83,
+      "name": "专辑"
+    }
+  ]
+}

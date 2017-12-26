@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http'
 import 'rxjs/add/operator/toPromise'
 
-
 @Injectable()
 export class HttpServerService {
   private subjectUrl: string
@@ -27,8 +26,7 @@ export class HttpServerService {
     })
   }
 
-  getSubjectList(tag): Promise<any> {
-    console.log(tag)
+  getSubjectList(tag: string): Promise<any> {
     switch (tag) {
       case 'hotMovie':
         this.subjectUrl = 'http://localhost:4200/v2/movie/in_theaters?city=上海&count=1'
@@ -45,8 +43,6 @@ export class HttpServerService {
       case 'unimaginaryBook':
         this.subjectUrl = 'http://localhost:4200/v2/book/search?q=非虚构类&count=1'
         break
-      default:
-        this.subjectUrl = 'http://localhost:4200/v2/movie/in_theaters?city=上海&count=1'
     }
     return new Promise((resolve, reject) => {
       this.http.get(this.subjectUrl)
@@ -60,7 +56,7 @@ export class HttpServerService {
     })
   }
 
-  getSubject(classify, id): Promise<any> {
+  getSubject(classify: string, id: number): Promise<any> {
     switch (classify) {
       case 'activity':
         classify = 'event'
