@@ -15,7 +15,7 @@ export class HttpServerService {
 
   getActivityList(): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.http.get('http://localhost:4200/v2/event/list?loc=108296&start=0&count=1')
+      this.http.get('http://localhost:4200/v2/event/list?loc=108296&start=0&count=10')
         .toPromise()
         .then(res => {
           if (res.status === 200) {
@@ -29,19 +29,19 @@ export class HttpServerService {
   getSubjectList(tag: string): Promise<any> {
     switch (tag) {
       case 'hotMovie':
-        this.subjectUrl = 'http://localhost:4200/v2/movie/in_theaters?city=上海&count=1'
+        this.subjectUrl = 'http://localhost:4200/v2/movie/in_theaters?city=上海&count=10'
         break
       case 'topMovie':
-        this.subjectUrl = 'http://localhost:4200/v2/movie/top250?count=1'
+        this.subjectUrl = 'http://localhost:4200/v2/movie/top250?count=10'
         break
       case 'newMovie':
-        this.subjectUrl = 'http://localhost:4200/v2/movie/coming_soon?count=1'
+        this.subjectUrl = 'http://localhost:4200/v2/movie/coming_soon?count=10'
         break
       case 'imaginaryBook':
-        this.subjectUrl = 'http://localhost:4200/v2/book/search?q=虚构类&count=1'
+        this.subjectUrl = 'http://localhost:4200/v2/book/search?q=虚构类&count=10'
         break
       case 'unimaginaryBook':
-        this.subjectUrl = 'http://localhost:4200/v2/book/search?q=非虚构类&count=1'
+        this.subjectUrl = 'http://localhost:4200/v2/book/search?q=非虚构类&count=10'
         break
     }
     return new Promise((resolve, reject) => {
